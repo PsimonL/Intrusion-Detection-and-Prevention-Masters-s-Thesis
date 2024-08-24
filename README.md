@@ -1,1 +1,1 @@
-# PsimonL-Intrusion-Detection-and-Prevention-Masters-s-Thesis
+# Intrusion-Detection-and-Prevention-Masters-s-Thesis
