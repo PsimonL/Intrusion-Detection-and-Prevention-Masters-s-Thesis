@@ -13,8 +13,10 @@ ls -la /etc/suricata
 
 # Fetch ET Open rules at /var/lib/suricata/rules/suricata.rules
 sudo suricata-update
-sudo -s
+sudo -i
 less /var/lib/suricata/rules/suricata.rules
+# To list sources
+sudo suricata-update list-sources
 
 # Check Suricata logs
 sudo tail /var/log/suricata/suricata.log
@@ -27,3 +29,6 @@ sudo vi /etc/suricata/suricata.yaml
 sudo systemctl restart suricata
 # Or
 sudo service suricata restart
+
+# Test Suricata configuration
+sudo suricata -T -c /etc/suricata/suricata.yaml -v
