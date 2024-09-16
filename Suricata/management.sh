@@ -32,3 +32,10 @@ sudo service suricata restart
 
 # Test Suricata configuration
 sudo suricata -T -c /etc/suricata/suricata.yaml -v
+
+# To run Suricata with tshark pcap file
+cd /var/log/suricata/tshark
+sudo suricata -c /etc/suricata/suricata.yaml -r data.pcap
+
+# Check alerts in JSOn format
+sudo cat /var/log/suricata/tshark/eve.json | jq .
