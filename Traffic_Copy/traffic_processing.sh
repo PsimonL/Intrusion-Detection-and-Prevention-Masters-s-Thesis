@@ -11,4 +11,7 @@ make
 sudo ./tzsp-proxy -i ens18 -p 37008 -d 172.20.136.1 -t 37008
 
 sudo apt-get install tshark
+cd /var/log/suricata; mkdir tshark; sudo chmod 777 tshark
 sudo tshark -i ens18 -f "udp port 37008" -n -d udp.port==37008,tzsp -w data.pcap -F pcap
+sudo nohup tshark -i ens18 -f "udp port 37008" -n -d udp.port==37008,tzsp -w data.pcap -F pcap &
+sudo tshark -r /var/log/suricata/tshark/data.pcap
