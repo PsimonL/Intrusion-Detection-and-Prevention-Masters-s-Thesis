@@ -22,13 +22,13 @@ sudo fdisk -l /dev/sdb
 df -Th
 
 # 
-sudo mkfs.ext4 /dev/sdb1
+sudo mkfs.ext4 /dev/sdb
 
 #
 sudo mkdir -p /var/log/suricata
 
 #
-sudo mount /dev/sdb1 /var/log/suricata
+sudo mount /dev/sdb /var/log/suricata
 
 #
 df -h
