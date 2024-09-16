@@ -9,3 +9,6 @@ sudo apt install suricata jq
 # Post installation
 sudo suricata --build-info
 sudo systemctl status suricata
+
+# Fetch rules
+sudo suricata-update
