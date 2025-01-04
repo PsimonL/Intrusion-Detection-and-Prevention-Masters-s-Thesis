@@ -1,0 +1,22 @@
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    enp6s18: {}
+      # addresses:
+      # - 172.20.254.94/16
+      #addresses: {}
+        #dhcp4: no
+        #gateway4: 172.20.0.1
+        #nameservers:
+        #addresses:
+        #- 1.1.1.1
+        #- 8.8.8.4
+    enp6s19:
+      addresses:
+      - 10.0.1.2/24
+      dhcp4: no
+      routes:
+          - to: 172.20.0.0/16
+            via: 10.0.1.1

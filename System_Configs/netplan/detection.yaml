@@ -1,0 +1,21 @@
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ens18:
+      addresses:
+      - 172.20.136.1/16
+      dhcp4: no
+      gateway4: 172.20.0.1
+      nameservers:
+        addresses:
+        - 1.1.1.1
+        - 8.8.8.4
+    ens19:
+      addresses:
+      - 10.0.1.1/24
+      dhcp4: no
+    ens20:
+      addresses:
+      - 10.0.2.1/24
+      dhcp4: no
