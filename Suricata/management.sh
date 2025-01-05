@@ -35,6 +35,8 @@ sudo suricata -T -c /etc/suricata/suricata.yaml -v
 
 # To run Suricata with tshark pcap file
 cd /var/log/suricata/tshark
+# Suricata will, by default, place the interface it is enabled on in promiscuous mode.
+sudo ip link set $INTERFACE_NAME promisc on
 sudo suricata -c /etc/suricata/suricata.yaml -r data.pcap
 
 # Check alerts in JSOn format
