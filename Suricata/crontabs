@@ -1,0 +1,2 @@
+# 3am run
+0 3 * * * /home/srogowski/rules/update_rules.sh
