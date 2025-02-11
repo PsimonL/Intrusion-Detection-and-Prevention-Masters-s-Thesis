@@ -27,6 +27,9 @@ greep "$SOME_UID" *.log
 # # host=localhost
 # # interface=ens19
 
+# Zeek policies can be found here:
+ls /opt/zeek/share/zeek/policy/
+
 sudo visudo
 # Then add "/opt/zeek/bin" at the end of secure_path variable
 sudo zeekctl deploy
