@@ -5,14 +5,14 @@
 # networkd and NetworkManager.
 
 sudo vim /etc/netplan/01-network-manager-all.yaml
-
 sudo netplan apply
-
 vim /etc/sysctl.conf
 # Uncomment line:
 # net.ipv4.ip_forward = 1
 grep -n "net.ipv4.ip_forward" /etc/sysctl.conf
-# interface ens18 is interface for ip 172.20.136.1, which have access to Internet 
+# Configures NAT to modify the source IP address of outgoing packets from the 10.10.10.0/24 subnet. 
+# It replaces the source IP with the IP of the ens18 interface, enabling devices in the private subnet to access external networks.
+# Interface ens18 is interface for ip 172.20.136.1, which have access to Internet 
 sudo iptables -t nat -A POSTROUTING -o ens18 -s 10.10.10.0/24 -j MASQUERADE
 sudo iptables -t nat -L -v -n
 # To reverse above rule
