@@ -70,7 +70,7 @@ To test suricata - used to test IDS:
 ```
 curl http://testmynids.org/uid/index.html
 ```
-aaaaaa
+To see log alerts:
 ```
 sudo cat /var/log/suricata/fast.log
 ```
