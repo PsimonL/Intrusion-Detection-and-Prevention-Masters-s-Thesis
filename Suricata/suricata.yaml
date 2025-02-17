@@ -15,7 +15,10 @@ suricata-version: "7.0"
 vars:
   # more specific is better for alert accuracy and performance
   address-groups:
-    HOME_NET: "[172.20.136.1/16,10.0.1.1/24,10.0.2.1/24]"
+    # HOME_NET: "[172.20.136.1/16]"
+    HOME_NET: "[10.0.1.1/24]"
+    # HOME_NET: "[10.0.2.1/24]"
+    # HOME_NET: "[10.10.10.1/24]"
     #HOME_NET: "[192.168.0.0/16,10.0.0.0/8,172.16.0.0/12]"
     #HOME_NET: "[192.168.0.0/16]"
     #HOME_NET: "[10.0.0.0/8]"
@@ -620,7 +623,10 @@ logging:
 
 # Linux high speed capture support
 af-packet:
-  - interface: ens19
+  - interface: ens19  # 10.0.1.1/24, to Host
+  # - interface: ens20  # 10.0.2.1/24, to Kali
+  # - interface: ens21  # 10.10.10.1/24, default gateway
+  # - interface: ens18  # 172.20.136.1/16, to Internet: curl http://testmynids.org/uid/index.html
     # Number of receive threads. "auto" uses the number of cores
     #threads: auto
     # Default clusterid. AF_PACKET will load balance packets based on flow.
