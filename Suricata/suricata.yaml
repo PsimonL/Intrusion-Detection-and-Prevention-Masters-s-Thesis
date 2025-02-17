@@ -17,8 +17,8 @@ vars:
   address-groups:
     # HOME_NET: "[172.20.136.1/16]"
     HOME_NET: "[10.0.1.1/24]"
-    # HOME_NET: "[10.0.2.1/24]"
-    # HOME_NET: "[10.10.10.1/24]"
+    # HOME_NET: "[10.0.2.1/24]" 
+    # HOME_NET: "[10.10.10.1/24]" 
     #HOME_NET: "[192.168.0.0/16,10.0.0.0/8,172.16.0.0/12]"
     #HOME_NET: "[192.168.0.0/16]"
     #HOME_NET: "[10.0.0.0/8]"
@@ -62,7 +62,7 @@ vars:
 # The default logging directory.  Any log or output file will be
 # placed here if it's not specified with a full path name. This can be
 # overridden with the -l command line parameter.
-default-log-dir: /var/lib/suricata/rules/
+default-log-dir: /var/log/suricata/
 
 # Global stats configuration
 stats:
@@ -400,12 +400,11 @@ outputs:
   #
   - pcap-log:
       enabled: yes
-      # filename: log.pcap
-      filename: /var/log/suricata/capture.pcap
+      filename: log.pcap
 
       # File size limit.  Can be specified in kb, mb, gb.  Just a number
       # is parsed as bytes.
-      limit: 1000mb
+      limit: 500mb
 
       # If set to a value, ring buffer mode is enabled. Will keep maximum of
       # "max-files" of size "limit"
@@ -625,7 +624,7 @@ logging:
 af-packet:
   - interface: ens19  # 10.0.1.1/24, to Host
   # - interface: ens20  # 10.0.2.1/24, to Kali
-  # - interface: ens21  # 10.10.10.1/24, default gateway
+  # - interface: ens21  # 10.10.10.1/24, IDS - default gateway
   # - interface: ens18  # 172.20.136.1/16, to Internet: curl http://testmynids.org/uid/index.html
     # Number of receive threads. "auto" uses the number of cores
     #threads: auto
@@ -2170,7 +2169,8 @@ napatech:
 default-rule-path: /var/lib/suricata/rules
 
 rule-files:
-  - "*.rules"
+  - suricata.rules
+  # - "*.rules"
 
 ##
 ## Auxiliary configuration files.
