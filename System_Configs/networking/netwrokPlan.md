@@ -1,6 +1,6 @@
 # Network Architecture
 
-## SOLUTION 1: Network connection
+## SOLUTION 1: Internet connection
 ```
                                              (172.20.136.1/16) [ens18] => ... => Internet
                                                                   |
