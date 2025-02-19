@@ -1876,7 +1876,7 @@ profiling:
     append: yes
 
   pcap-log:
-    enabled: no
+    enabled: yes
     filename: pcaplog_stats.log
     append: yes
 
