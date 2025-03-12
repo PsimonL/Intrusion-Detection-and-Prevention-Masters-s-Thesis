@@ -1,0 +1,5 @@
+Suricata/classification.config
+Suricata/suricata.rules
+Algorithms/data/
+.vscode/
+.idea/

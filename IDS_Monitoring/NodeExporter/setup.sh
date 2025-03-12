@@ -2,7 +2,7 @@
 
 wget https://github.com/prometheus/node_exporter/releases/download/v1.9.0/node_exporter-1.9.0.linux-amd64.tar.gz
 
-tar xvfz node_exporter-1.9.0.linux-amd64.tar.gz
+tar -xvfz node_exporter-1.9.0.linux-amd64.tar.gz
 
 cd node_exporter-1.9.0.linux-amd64 
 

@@ -1,0 +1,3 @@
+- Entropia ruchu sieciowego
+- Miary odległości: Mahalanobis Distance 
+- Analiza sygnatur: Suricata, Snort (Zeek/Bro)

@@ -1,6 +1,7 @@
 #! /bin/bash
 
 # Go to: https://prometheus.io/download/#prometheus
+wget https://github.com/prometheus/prometheus/releases/download/v3.2.0/prometheus-3.2.0.linux-amd64.tar.gz
 
 tar -zxvf prometheus-3.2.0.linux-amd64.tar.gz
 
