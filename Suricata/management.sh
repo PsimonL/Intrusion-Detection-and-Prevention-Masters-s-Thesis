@@ -67,3 +67,7 @@ curl http://testmynids.org/uid/index.html
 # ################## VII ##################
 # Check alerts in JSOn format
 sudo cat /var/log/suricata/tshark/eve.json | jq .
+
+
+
+sudo suricata -r datasets/Thursday-WorkingHours.pcap -l logging/suricata/ -s /var/lib/suricata/ -c /etc/suricata/suricata.yaml
